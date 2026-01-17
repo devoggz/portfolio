@@ -44,16 +44,16 @@ const setupTextHover = (container, type) => {
       animateLetter(letter, min + (max - min) * intensity);
     });
   };
-  const handleMouseLeave = () => letters.forEach((letter) => animateLetter(letter, base, 0.3));
-
+  const handleMouseLeave = () =>
+    letters.forEach((letter) => animateLetter(letter, base, 0.3));
 
   container.addEventListener("mousemove", handleMouseMove);
-  container.addEventListener("mousemove", handleMouseLeave());
+  container.addEventListener("mouseleave", handleMouseLeave);
 
   return () => {
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mousemove", handleMouseLeave());
-  }
+    container.removeEventListener("mousemove", handleMouseMove);
+    container.removeEventListener("mouseleave", handleMouseLeave);
+  };
 };
 
 const Welcome = () => {
@@ -61,13 +61,13 @@ const Welcome = () => {
   const subtitleRef = useRef(null);
 
   useGSAP(() => {
-   const titleCleanup = setupTextHover(titleRef.current, "title");
-    const subtitleCleanup =setupTextHover(subtitleRef.current, "subtitle");
+    const titleCleanup = setupTextHover(titleRef.current, "title");
+    const subtitleCleanup = setupTextHover(subtitleRef.current, "subtitle");
 
     return () => {
-      subtitleCleanup()
-      titleCleanup()
-    }
+      subtitleCleanup();
+      titleCleanup();
+    };
   }, []);
 
   return (
