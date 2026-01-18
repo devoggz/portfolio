@@ -1,5 +1,5 @@
 import React from "react";
-import { Dock, Navbar, Welcome } from "#components";
+import { Dock, Navbar, Welcome, Home } from "#components";
 import gsap from "gsap";
 
 import { Draggable } from "gsap/Draggable";
@@ -9,6 +9,7 @@ import {
   Resume,
   Finder,
   Text,
+  Photos,
   Contact,
   ImageWindowContext,
 } from "#windows";
@@ -28,6 +29,8 @@ const App = () => {
       <Text />
       <ImageWindowContext />
       <Contact />
+      <Home />
+      <Photos />
     </main>
   );
 };
