@@ -25,7 +25,7 @@ const ImageWindowContext = () => {
             <img
               src={imageUrl}
               alt={name}
-              className="w-full h-auto max-h-[70vh] object-contain rounded"
+              className="w-full h-auto max-h-[80vh] object-contain rounded"
             />
           </div>
         ) : null}

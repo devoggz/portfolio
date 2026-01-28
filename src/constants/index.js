@@ -40,13 +40,13 @@ const dockApps = [
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Case Studies", // was "Safari"
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Photography Gallery", // was "Photos"
     icon: "photos.png",
     canOpen: true,
   },
@@ -58,7 +58,7 @@ const dockApps = [
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "Technical Skills", // was "Terminal"
     icon: "terminal.png",
     canOpen: true,
   },
@@ -98,21 +98,14 @@ const techStack = [
     category: "Mobile",
     items: ["React Native", "Expo"],
   },
+
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    category: "Graphic Design",
+    items: ["Logos", "Identities", "Social Media", "Editorial"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Photography",
+    items: ["Portraits", "Landscapes", "Events"],
   },
 ];
 
@@ -133,7 +126,7 @@ const socials = [
   },
   {
     id: 3,
-    text: "Twitter/X",
+    text: "Behance",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
     link: "https://x.com/jsmasterypro",
@@ -149,52 +142,137 @@ const socials = [
 
 const photosLinks = [
   {
-    id: 1,
+    id: "library", // Changed from 1 to "library"
     icon: "/icons/gicon1.svg",
     title: "Library",
   },
   {
-    id: 2,
+    id: "portraits", // Changed from 2 to "portraits"
     icon: "/icons/gicon2.svg",
-    title: "Memories",
+    title: "Portraits",
   },
   {
-    id: 3,
+    id: "landscapes", // Changed from 3 to "landscapes"
     icon: "/icons/file.svg",
-    title: "Places",
+    title: "Landscapes",
   },
   {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
+    id: "iphone", // Changed from 4 to "iphone"
     icon: "/icons/gicon5.svg",
-    title: "Favorites",
+    title: "Short On iPhone",
   },
 ];
 
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/sunrise.JPG",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/fly.JPG",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/bright.JPG",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/away.JPG",
+  },
+  {
+    id: 5,
+    img: "/images/boat.JPG",
+  },
+  {
+    id: 6,
+    img: "/images/set.JPG",
+  },
+  {
+    id: 7,
+    img: "/images/home.jpg",
+  },
+  {
+    id: 8,
+    img: "/images/set.JPG",
   },
 ];
 
+const albums = {
+  library: [
+    {
+      id: 1,
+      img: "/images/sunrise.JPG",
+    },
+    {
+      id: 2,
+      img: "/images/fly.JPG",
+    },
+    {
+      id: 3,
+      img: "/images/bright.JPG",
+    },
+    {
+      id: 4,
+      img: "/images/away.JPG",
+    },
+    {
+      id: 5,
+      img: "/images/boat.JPG",
+    },
+    {
+      id: 6,
+      img: "/images/set.JPG",
+    },
+    {
+      id: 7,
+      img: "/images/home.jpg",
+    },
+    {
+      id: 8,
+      img: "/images/set.JPG",
+    },
+  ],
+  portraits: [
+    {
+      id: 1,
+      img: "/images/sunrise.JPG",
+    },
+    {
+      id: 2,
+      img: "/images/bright.JPG",
+    },
+  ],
+  landscapes: [
+    {
+      id: 1,
+      img: "/images/away.JPG",
+    },
+    {
+      id: 2,
+      img: "/images/boat.JPG",
+    },
+    {
+      id: 3,
+      img: "/images/fly.JPG",
+    },
+  ],
+  iphone: [
+    {
+      id: 1,
+      img: "/images/home.jpg",
+    },
+    {
+      id: 2,
+      img: "/images/set.JPG",
+    },
+  ],
+};
+
+// Keep the old gallery export for backward compatibility if needed
+
 export {
+  albums,
   navLinks,
   navIcons,
   dockApps,
@@ -215,7 +293,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Graphic Design",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -223,20 +301,6 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
-          ],
-        },
-        {
-          id: 2,
           name: "nike.com",
           icon: "/images/safari.png",
           kind: "file",
@@ -244,84 +308,15 @@ const WORK_LOCATION = {
           href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
           position: "top-10 right-20",
         },
-        {
-          id: 4,
-          name: "nike.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
       ],
     },
 
     // ▶ Project 2
-    {
-      id: 6,
-      name: "AI Resume Analyzer",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "AI Resume Analyzer Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 right-10",
-          description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
-          ],
-        },
-        {
-          id: 2,
-          name: "ai-resume-analyzer.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
-        },
-        {
-          id: 4,
-          name: "ai-resume-analyzer.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
-      ],
-    },
 
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Web Development",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -329,21 +324,25 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
+          name: "Tazama Digital",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
-          ],
+          fileType: "url",
+          href: "https://taz-ds.vercel.app/",
+          position: "top-10 right-105",
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "RONN Law",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          position: "top-10 right-80",
+        },
+        {
+          id: 3,
+          name: "Apple Centre Ke",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -352,21 +351,12 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
-          icon: "/images/image.png",
+          name: "Keshi",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
+          fileType: "url",
+          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          position: "top-10 right-50",
         },
       ],
     },
@@ -382,27 +372,17 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "me.png",
+      name: "About Me",
       icon: "/images/kenny.jpg",
       kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/kenny.jpg",
-    },
-
-    {
-      id: 2,
-      name: "about-me.txt",
-      icon: "/images/ken-w.jpg",
-      kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/ken-w.jpg",
+      position: "top-10 left-5",
+      subtitle: "Ken Govoga",
+      image: "/images/kenny.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
+        "Hey! I’m Govoga 👋,",
+        "For the over 6 years, I’ve worked as a multidisciplinary designer across branding, web development, and photography.",
+        " I focus on turning complex challenges into visual solutions while moving quickly between disciplines, keeping quality consistent and shifting easily between collaboration and independent work.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
       ],
     },
@@ -426,39 +406,10 @@ const RESUME_LOCATION = {
   ],
 };
 
-const TRASH_LOCATION = {
-  id: 4,
-  type: "trash",
-  name: "Trash",
-  icon: "/icons/trash.svg",
-  kind: "folder",
-  children: [
-    {
-      id: 1,
-      name: "trash1.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
-    },
-    {
-      id: 2,
-      name: "trash2.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
-    },
-  ],
-};
-
 export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
-  trash: TRASH_LOCATION,
 };
 
 const INITIAL_Z_INDEX = 1000;
