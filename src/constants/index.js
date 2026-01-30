@@ -34,7 +34,7 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Works", // was "Finder"
     icon: "finder.png",
     canOpen: true,
   },
@@ -46,7 +46,7 @@ const dockApps = [
   },
   {
     id: "photos",
-    name: "Photography Gallery", // was "Photos"
+    name: "Photo Gallery", // was "Photos"
     icon: "photos.png",
     canOpen: true,
   },
@@ -95,17 +95,21 @@ const techStack = [
     items: ["React.js", "Next.js", "TypeScript"],
   },
   {
+    category: "Graphic Design",
+    items: ["Adobe Creative Cloud Suite"],
+  },
+  {
+    category: "Motion Design",
+    items: ["After Effects", "Cinema 4D"],
+  },
+  {
     category: "Mobile",
     items: ["React Native", "Expo"],
   },
 
   {
-    category: "Graphic Design",
-    items: ["Logos", "Identities", "Social Media", "Editorial"],
-  },
-  {
     category: "Photography",
-    items: ["Portraits", "Landscapes", "Events"],
+    items: ["Capture One", "Photoshop", "Sony Alpha"],
   },
 ];
 
@@ -159,7 +163,7 @@ const photosLinks = [
   {
     id: "iphone", // Changed from 4 to "iphone"
     icon: "/icons/gicon5.svg",
-    title: "Short On iPhone",
+    title: "#ShortOniPhone",
   },
 ];
 
@@ -202,69 +206,177 @@ const albums = {
   library: [
     {
       id: 1,
-      img: "/images/sunrise.JPG",
+      img: "/images/events/event.jpg",
     },
+
     {
       id: 2,
-      img: "/images/fly.JPG",
+      img: "/images/landscapes/landscape6.jpg",
     },
     {
       id: 3,
-      img: "/images/bright.JPG",
+      img: "/images/exhibition/exh3.jpg",
     },
     {
       id: 4,
-      img: "/images/away.JPG",
+      img: "/images/exhibition/exh5.jpg",
     },
     {
       id: 5,
-      img: "/images/boat.JPG",
+      img: "/images/landscapes/landscape3.jpg",
     },
     {
       id: 6,
-      img: "/images/set.JPG",
-    },
-    {
-      id: 7,
-      img: "/images/home.jpg",
+      img: "/images/events/event6.jpg",
     },
     {
       id: 8,
-      img: "/images/set.JPG",
+      img: "/images/portraits/frame8.jpg",
+    },
+    {
+      id: 7,
+      img: "/images/exhibition/exh3.jpg",
     },
   ],
   portraits: [
     {
       id: 1,
-      img: "/images/sunrise.JPG",
+      img: "/images/portraits/frame.jpg",
     },
     {
       id: 2,
-      img: "/images/bright.JPG",
+      img: "/images/portraits/frame2.jpg",
+    },
+    {
+      id: 3,
+      img: "/images/portraits/frame3.jpg",
+    },
+    {
+      id: 4,
+      img: "/images/portraits/frame4.jpg",
+    },
+    {
+      id: 5,
+      img: "/images/portraits/frame5.jpg",
+    },
+    {
+      id: 6,
+      img: "/images/portraits/frame6.jpg",
+    },
+    {
+      id: 7,
+      img: "/images/portraits/frame7.jpg",
+    },
+    {
+      id: 8,
+      img: "/images/portraits/frame8.jpg",
     },
   ],
   landscapes: [
     {
       id: 1,
-      img: "/images/away.JPG",
+      img: "/images/landscapes/landscape.jpg",
     },
     {
       id: 2,
-      img: "/images/boat.JPG",
+      img: "/images/landscapes/landscape2.jpg",
     },
     {
       id: 3,
-      img: "/images/fly.JPG",
+      img: "/images/landscapes/landscape3.jpg",
+    },
+    {
+      id: 4,
+      img: "/images/landscapes/landscape4.jpg",
+    },
+    {
+      id: 5,
+      img: "/images/landscapes/landscape5.jpg",
+    },
+  ],
+
+  events: [
+    {
+      id: 1,
+      img: "/images/events/event.jpg",
+    },
+    {
+      id: 2,
+      img: "/images/events/event1.jpg",
+    },
+    {
+      id: 3,
+      img: "/images/events/event2.jpg",
+    },
+    {
+      id: 4,
+      img: "/images/events/event3.jpg",
+    },
+    {
+      id: 5,
+      img: "/images/events/event4.jpg",
+    },
+    {
+      id: 6,
+      img: "/images/events/event5.jpg",
+    },
+    {
+      id: 7,
+      img: "/images/events/event6.jpg",
+    },
+    {
+      id: 8,
+      img: "/images/events/event7.jpg",
+    },
+    {
+      id: 9,
+      img: "/images/events/event8.jpg",
     },
   ],
   iphone: [
     {
       id: 1,
-      img: "/images/home.jpg",
+      img: "/images/iphone/shot.jpg",
     },
     {
       id: 2,
-      img: "/images/set.JPG",
+      img: "/images/iphone/shot2.jpg",
+    },
+    {
+      id: 3,
+      img: "/images/iphone/shot3.jpg",
+    },
+    {
+      id: 4,
+      img: "/images/iphone/shot4.jpg",
+    },
+    {
+      id: 5,
+      img: "/images/iphone/shot5.jpg",
+    },
+    {
+      id: 6,
+      img: "/images/iphone/shot6.jpg",
+    },
+    {
+      id: 7,
+      img: "/images/iphone/shot7.jpg",
+    },
+    {
+      id: 8,
+      img: "/images/iphone/shot8.jpg",
+    },
+    {
+      id: 9,
+      img: "/images/iphone/shot9.jpg",
+    },
+    {
+      id: 10,
+      img: "/images/iphone/shot10.jpg",
+    },
+    {
+      id: 11,
+      img: "/images/iphone/shot11.jpg",
     },
   ],
 };
@@ -292,8 +404,8 @@ const WORK_LOCATION = {
   children: [
     // ▶ Project 1
     {
-      id: 5,
-      name: "Graphic Design",
+      id: 1,
+      name: "ALN Kenya",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -301,26 +413,114 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "nike.com",
+          name: "Website",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-          position: "top-10 right-20",
+          href: "https://aln.africa",
+          position: "top-5 right-115",
+        },
+        {
+          id: 2,
+          name: "Brand Guidelines",
+          icon: "/images/pdf.png",
+          kind: "file",
+          fileType: "imgfile",
+          position: "top-5 right-75",
+        },
+        {
+          id: 3,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-5 right-20",
+          imageUrl: "/images/aln/aln.jpg",
+        },
+        {
+          id: 4,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-30 right-115",
+          imageUrl: "/images/aln/aln2.jpg",
+        },
+        {
+          id: 5,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-30 right-75",
+          imageUrl: "/images/aln/aln3.jpg",
+        },
+        {
+          id: 6,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-30 right-25",
+          imageUrl: "/images/aln/aln4.jpg",
+        },
+        {
+          id: 7,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-50 right-115",
+          imageUrl: "/images/aln/aln5.jpg",
+        },
+        {
+          id: 8,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-50 right-80",
+          imageUrl: "/images/aln/aln6.jpg",
+        },
+        {
+          id: 9,
+          name: "aln",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-50 right-25",
+          imageUrl: "/images/aln/aln6.jpg",
         },
       ],
     },
 
-    // ▶ Project 2
-
-    // ▶ Project 3
     {
-      id: 7,
-      name: "Web Development",
+      id: 2,
+      name: "RONN LAW",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      position: "top-10 left-75", // icon position inside Finder
+      windowPosition: "top-[22vh] left-5", // optional: Finder window position
+      children: [
+        {
+          id: 1,
+          name: "None",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://aln.africa",
+          position: "top-30 right-115",
+        },
+      ],
+    },
+
+    {
+      id: 3,
+      name: "Front-End Development",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-45",
+      windowPosition: "top-[33vh] left-5",
       children: [
         {
           id: 1,
@@ -329,7 +529,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://taz-ds.vercel.app/",
-          position: "top-10 right-105",
+          position: "top-5 right-110",
         },
         {
           id: 2,
@@ -337,8 +537,8 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-80",
+          href: "https://demo-ron.vercel.app/",
+          position: "top-5 right-75",
         },
         {
           id: 3,
@@ -346,17 +546,8 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "Keshi",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-50",
+          href: "https://demo-apple-ke.vercel.app/",
+          position: "top-5 right-45",
         },
       ],
     },
