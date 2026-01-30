@@ -7,7 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/karura.jpg");
+  background-image: url("/images/home4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -237,7 +237,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl h-[600px] absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-w-4xl h-[700px] absolute top-115 left-90 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
     #window-header {
       @apply flex-none;
@@ -280,17 +280,17 @@ body {
     }
 
     .gallery {
-      @apply flex-1 p-5 overflow-y-auto;
+      @apply flex-1 p-5  overflow-y-auto;
 
       ul {
-        @apply grid gap-2.5;
+        @apply grid gap-2.5 ;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
         li {
-          @apply cursor-pointer transition-transform hover:scale-105;
+          @apply cursor-pointer transition-transform hover:scale-103;
 
           img {
-            @apply w-full aspect-square object-cover rounded-lg;
+            @apply w-full aspect-square object-cover;
           }
         }
       }
